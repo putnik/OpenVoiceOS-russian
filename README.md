@@ -18,7 +18,7 @@
 
 Ссылки:
 - [Создание и настройка облака Яндекса](https://cloud.yandex.ru/services/speechkit)
-- [Настройка  Text-to-Speech](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/tts-engine#yandex-speechkit)
+- [Настройка Text-to-Speech](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/tts-engine#yandex-speechkit)
 - [Настройка Speech-To-Text](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/stt-engine#yandex-speechkit-stt)
 
 Конфиг прописывается после запуска команды `mycroft-config edit user`. В случае использования Яндекса с голосом Филиппа итоговый вариант будет выглядеть примерно вот так:
@@ -52,8 +52,30 @@
 Некоторые скиллы его не используют:
 - [skill-weather](https://github.com/MycroftAI/skill-weather) — перевод прямо в коде (`locale/ru-ru`)
 
+## Обновление репозиториев
+### Скилы
+#### Вариант 1:
+```bash
+cd /opt/mycroft/skills/skill-name
+git pull
+```
+
+#### Вариант 2.
+```bash
+mycroft-msm install git+https://github.com/name/path.git@branch-name
+```
+Вместо `install` может быть `update`, но вероятно при том же номере версии скила обновление не происходит. Можно сделать `mycroft-msm delete skill-name` и уже потом `install`.
+
+### Переводы скилов
+```bash
+cd ~
+git clone https://github.com/putnik/mycroft-update-translations.git
+cd mycroft-update-translations
+./mycroft-update-translations.sh -l ru-ru
+```
+
 ## Полезные репозитории
+* [putnik/mycroft-update-translations](https://github.com/putnik/mycroft-update-translations)
 * [jmontane/mycroft-copy-translations](https://github.com/jmontane/mycroft-copy-translations)
-* [jmontane/mycroft-update-translations](https://github.com/jmontane/mycroft-update-translations)
 * [jmontane/mycroft-catalan.conf](https://github.com/jmontane/mycroft-catalan.conf)
 * [gras64/pootle-sync-skill](https://github.com/gras64/pootle-sync-skill)
