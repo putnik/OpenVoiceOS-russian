@@ -64,6 +64,8 @@ git pull
 ```bash
 mycroft-msm install git+https://github.com/name/path.git@branch-name
 ```
+Обратите внимание на `git+` в начале и `@branch-name` (нужно заменить на название конкретной ветки) в конце URL'а.
+
 Вместо `install` может быть `update`, но вероятно при том же номере версии скила обновление не происходит. Можно сделать `mycroft-msm delete skill-name` и уже потом `install`.
 
 ### Переводы скилов
