@@ -18,7 +18,7 @@ mycroft-pip uninstall lingua-franca -y
 mycroft-pip install git+https://github.com/putnik/lingua-franca.git@issue-213
 ```
 
-5. Обновите переводы скилов
+5. Обновите переводы навыков
 ```bash
 cd ~
 git clone https://github.com/putnik/mycroft-update-translations.git
@@ -63,7 +63,7 @@ mycroft-config edit user
 }
 ```
 
-8. Отключим скиллы, которые в данный момент не поддерживают русский язык:
+8. Отключим навыки, которые в данный момент не поддерживают русский язык:
 ```bash
 mycroft-msm remove fallback-duck-duck-go
 mycroft-msm remove fallback-wolfram-alpha
@@ -81,4 +81,4 @@ git checkout -b 21.02 origin/21.02
 cd ~
 mycroft-start debug
 ```
-Он запустится, настроится, предложит добавить устройство в аккаунт. Какие-то скиллы могут не загрузиться из-за отсутствия переводов или изменения файлов.
+Он запустится, настроится, предложит добавить устройство в аккаунт. Какие-то навыки могут не загрузиться из-за отсутствия переводов или изменения файлов.
