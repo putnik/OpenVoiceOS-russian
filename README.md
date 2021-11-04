@@ -73,7 +73,8 @@ mycroft-msm install git+https://github.com/name/path.git@branch-name
 cd ~
 git clone https://github.com/putnik/mycroft-update-translations.git
 cd mycroft-update-translations
-./mycroft-update-translations.sh -l ru-ru
+pip install -r requirements.txt 
+./mycroft-update-translations.py -l ru-ru
 ```
 
 ## Полезные репозитории
