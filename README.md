@@ -49,11 +49,11 @@
 ## Переводы
 [translate.mycroft.ai](https://translate.mycroft.ai/ru/) — основной инструмент для перевода
 
-Некоторые скиллы его не используют:
+Некоторые навыки его не используют:
 - [skill-weather](https://github.com/MycroftAI/skill-weather) — перевод прямо в коде (`locale/ru-ru`)
 
 ## Обновление репозиториев
-### Скилы
+### Навыки
 #### Вариант 1:
 ```bash
 cd /opt/mycroft/skills/skill-name
@@ -66,9 +66,9 @@ mycroft-msm install git+https://github.com/name/path.git@branch-name
 ```
 Обратите внимание на `git+` в начале и `@branch-name` (нужно заменить на название конкретной ветки) в конце URL'а.
 
-Вместо `install` может быть `update`, но вероятно при том же номере версии скила обновление не происходит. Можно сделать `mycroft-msm delete skill-name` и уже потом `install`.
+Вместо `install` может быть `update`, но вероятно при том же номере версии навыка обновление не происходит. Можно сделать `mycroft-msm delete skill-name` и уже потом `install`.
 
-### Переводы скилов
+### Переводы навыков
 ```bash
 cd ~
 git clone https://github.com/putnik/mycroft-update-translations.git
