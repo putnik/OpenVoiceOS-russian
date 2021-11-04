@@ -14,6 +14,7 @@ git pull
 
 4. Обновите версию lingua-franca на кастомную с поддержкой русского языка
 ```bash
+mycroft-pip uninstall lingua-franca -y
 mycroft-pip install git+https://github.com/putnik/lingua-franca.git@issue-213
 ```
 
@@ -26,13 +27,20 @@ mycroft-pip install -r requirements.txt
 ./mycroft-update-translations.py -l ru-ru
 ```
 
-6. Устрановите русский язык в настройках Mycroft:
+6. Если раньше не перезагружались, то сейчас самое время это сделать:
+```bash
+sudo reboot now
+```
+Если вы до этого подлючались по кабелю, то нужно будет переподключиться к новому IP по Wi-Fi.
+
+7. Устрановите русский язык в настройках Mycroft:
 ```bash
 mycroft-config edit user
 ```
-Содержимое файла (с учётом выбора Yandex Cloud, замените оба значения `api_key` на свой)
+Примерное содержимое файла (с учётом выбора Yandex Cloud, замените оба значения `api_key` на свой)
 ```json
 {
+  "max_allowed_core_version": 21.2,
   "lang": "ru-ru",
   "stt": {
     "yandex": {
@@ -55,15 +63,22 @@ mycroft-config edit user
 }
 ```
 
-7. Если раньше не перезагружались, то сейчас самое время это сделать:
+8. Отключим скиллы, которые в данный момент не поддерживают русский язык:
 ```bash
-sudo reboot now
+mycroft-msm remove fallback-duck-duck-go
+mycroft-msm remove fallback-wolfram-alpha
+mycroft-msm remove mycroft-stock.mycroftai
 ```
-Если вы до этого подлючались по кабелю, то нужно будет переподключиться к новому IP по Wi-Fi.
 
-8. Запускаем Майкрофта:
+9. Актуализируем погодный навык:
 ```bash
+cd /opt/mycroft/skills/mycroft-weather.mycroftai
+git checkout -b 21.02 origin/21.02
+```
+
+10. Запускаем Майкрофта:
+```bash
+cd ~
 mycroft-start debug
 ```
-
-9. Ничего не работает
+Он запустится, настроится, предложит добавить устройство в аккаунт. Какие-то скиллы могут не загрузиться из-за отсутствия переводов или изменения файлов.
