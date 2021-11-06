@@ -5,24 +5,24 @@
 Подробные инструкции по настройке и ссылки на сайты можно найти в [документации Mycroft по STT](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/stt-engine).
 
 ## Таблица сравнения
-| Название           | Русский  | Лицензия        | Облако | Стоимость
-| ------------------ | -------- | --------------- | ------ | ---------
-| Mimic 1            | ?        | ?               | ✅ нет  | бесплатно
-| Mimic 2            | ?        | ✅ Apache v2    | ✅ нет  | бесплатно
-| MaryTTS            | ?        | ✅ GNU LGPL v3  | ✅ нет  | бесплатно
-| FA TTS             | ?        | ✅ GNU LGPL v3  | ✅ нет  | бесплатно
-| eSpeak             | 💔 плохо | ?               | ✅ нет  | бесплатно
-| Amazon Polly       | ✅ да    | 💔 проприетарная | ☁️ да  | 💰 [платно](https://aws.amazon.com/polly/pricing/?nc=sn&loc=4): 4-16 $ за миллион символов (2,9—11,5 ₽ за тысячу)
-| Google TTS         | ✅ да    | 💔 проприетарная | ☁️ да  | бесплатно
-| IBM Watson         | ❌ нет   | 💔 проприетарная | ☁️ да  | 💰 [платно](https://cloud.ibm.com/catalog/services/text-to-speech): 2,14 ¢ (1,53 ₽) за тысячу символов
-| Microsoft Azure    | ?        | 💔 проприетарная | ☁️ да  | ?
-| Microsoft Bing     | ?        | 💔 проприетарная | ☁️ да  | ?
-| Mozilla TTS        | ?        | ✅ MPL v2        | ✅ нет | бесплатно
-| Coqui TTS          | ?        | ✅ MPL v2        | ✅ нет | бесплатно
-| Responsive Voice   | ✅ да    | 💔 проприетарная | ☁️ да  | ?
-| SpdSay             | ✅ да    | ✅ GNU GPL v2    | ✅ нет | бесплатно
-| Yandex Cloud       | ✅ да    | 💔 проприетарная | ☁️ да  | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за тысячу символов
-| VK Cloud           | ✅ да    | 💔 проприетарная | ☁️ да  | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за тысячу символов
+| Название           | Русский  | Лицензия     | Локально | Стоимость
+| ------------------ | -------- | ------------ | -------- | ---------
+| Mimic 1            | ?        | ?            | ✅ да    | бесплатно
+| Mimic 2            | ?        | ✅ Apache v2 | ✅ да    | бесплатно
+| MaryTTS            | ?        | ✅ LGPL v3   | ✅ да    | бесплатно
+| FA TTS             | ?        | ✅ LGPL v3   | ✅ да    | бесплатно
+| eSpeak             | 💔 плохо | ?            | ✅ да    | бесплатно
+| Amazon Polly       | ✅ да    | 💔           | ☁️ нет   | 💰 [платно](https://aws.amazon.com/polly/pricing/?nc=sn&loc=4): 0,4-1,6 ¢ (0,29—1,15 ₽) за 1000 символов
+| Google TTS         | ✅ да    | 💔           | ☁️ нет   | бесплатно
+| IBM Watson         | ❌ нет   | 💔           | ☁️ нет   | 💰 [платно](https://cloud.ibm.com/catalog/services/text-to-speech): 2,14 ¢ (1,53 ₽) за 1000 символов
+| Microsoft Azure    | ?        | 💔           | ☁️ нет   | ?
+| Microsoft Bing     | ?        | 💔           | ☁️ нет   | ?
+| Mozilla TTS        | ?        | ✅ MPL v2    | ✅ да    | бесплатно
+| Coqui TTS          | ?        | ✅ MPL v2    | ✅ да    | бесплатно
+| Responsive Voice   | ✅ да    | 💔           | ☁️ нет   | ?
+| SpdSay             | ✅ да    | ✅ GPL v2    | ✅ да    | бесплатно
+| Yandex Cloud       | ✅ да    | 💔           | ☁️ нет   | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов
+| VK Cloud           | ✅ да    | 💔           | ☁️ нет   | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов
 
 ## Что выбрать?
 - Самая быстрая настройка: Google TTS, голос Гугл-переводчика.
