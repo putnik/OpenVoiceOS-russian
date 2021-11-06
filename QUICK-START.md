@@ -37,7 +37,7 @@ sudo reboot now
 ```bash
 mycroft-config edit user
 ```
-Примерное содержимое файла (с учётом выбора Yandex Cloud, замените оба значения `api_key` на свой)
+Примерное содержимое файла (с учётом выбора Yandex Cloud для STT, замените значения ключа `api_key` на свой)
 ```json
 {
   "max_allowed_core_version": 21.2,
@@ -46,22 +46,17 @@ mycroft-config edit user
     "yandex": {
       "lang": "ru-RU",
       "credential": {
-        "api_key": "XXXXXXXXXX"
+        "api_key": "YOUR_API_KEY"
       }
     },
     "module": "yandex"
   },
   "tts": {
-    "module": "yandex",
-    "yandex": {
-      "lang": "ru-RU",
-      "api_key": "XXXXXXXXXX",
-      "voice": "filipp",
-      "emotion": "good"
-    }
+    "module": "google"
   }
 }
 ```
+После завершения процесса настройки можете посмотреть страницы настройки [STT](/STT.md) и [TTS](/TTS.md) и выбрать другие движки.
 
 8. Отключим навыки, которые в данный момент не поддерживают русский язык:
 ```bash
