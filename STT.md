@@ -12,7 +12,7 @@
 | Kaldi                             |          | ✅ Apache v2    |          | ✅ бесплатно
 | Mozilla DeepSpeech                | возможно | ✅ MPL v2       | ✅ да    | ✅ бесплатно
 | Microsoft Azure                   |          |                 |          | 
-| [Wit.ai](#wit-ai)                 | ✅ да    | 💔              | ☁️ нет   | ✅ бесплатно
+| [Wit.ai](#witai)                 | ✅ да    | 💔              | ☁️ нет   | ✅ бесплатно
 | [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💔              | ☁️ нет   | 💰 [платно](https://cloud.yandex.ru/prices): 0,15 ₽ за 15 секунд
 | [VK Cloud](#vk-cloud)             | ✅ да    | 💔              | ☁️ нет   | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 0,12 ₽ за 15 секунд
 
