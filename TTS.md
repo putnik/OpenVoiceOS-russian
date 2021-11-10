@@ -48,22 +48,12 @@
 
 Ссылки:
 - [Создание и настройка облака Яндекса](https://cloud.yandex.ru/services/speechkit)
-- [Настройка Text-to-Speech](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/tts-engine#yandex-speechkit)
-- [Настройка Speech-To-Text](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/stt-engine#yandex-speechkit-stt)
+- [Руководство по настройке](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/tts-engine#yandex-speechkit)
 
 В случае использования Яндекса голоса Филиппа итоговый вариант конфига будет выглядеть примерно вот так:
 ```json
 {
   "lang": "ru-ru",
-  "stt": {
-    "yandex": {
-      "lang": "ru-RU",
-      "credential": {
-        "api_key": "YOUR_API_KEY"
-      }
-    },
-    "module": "yandex"
-  },
   "tts": {
     "module": "yandex",
     "yandex": {
@@ -76,6 +66,8 @@
 }
 ```
 
+См. также [Yandex SpeechKit STT](./STT.md#yandex-speechkit).
+
 ## VK Cloud
 Неплохой и достаточно быстрый в настройке способ. Требует постоянного подключения к интернету, а также наличия аккаунта в облаке VK.
 При регистрации даётся 100 рублей (можно получить до 3000 на два месяца для тестирования), дальше требует оплаты.
@@ -86,6 +78,9 @@
 Проблемы:
 - Только один голос (вроде бы тот же, что у Маруси)
 - Достаточно большие задержки при генерации
+
+Установка:
+`mycroft-pip install mycroft-plugin-vk-cloud`
 
 Конфиг будет выглядеть примерно вот так:
 ```json
@@ -98,13 +93,8 @@
         "service_token": "YOUR_SERVICE_TOKEN"
       }
     }
-  },
-  "tts": {
-    "module": "vk",
-    "yandex": {
-      "service_token": "YOUR_SERVICE_TOKEN",
-      "tempo": 1.1
-    }
   }
 }
 ```
+
+См. также [VK Cloud STT](./STT.md#vk-cloud).
