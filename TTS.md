@@ -7,25 +7,26 @@
 ## Таблица сравнения
 | Название           | Русский  | Лицензия     | Локально | Стоимость
 | ------------------ | -------- | ------------ | -------- | ---------
-| Mimic 1            | ?        | ✅ BSD-like  | ✅ да    | бесплатно
-| Mimic 2            | ?        | ✅ Apache v2 | ✅ да    | бесплатно
-| MaryTTS            | нет?     | ✅ LGPL v3   | ✅ да    | бесплатно
-| FA TTS             | ?        | ✅ LGPL v3   | ✅ да    | бесплатно
-| eSpeak             | 💔 плохо | ✅ GPL v3    | ✅ да    | бесплатно
-| eSpeak NG          | ?        | ✅ GPL v3    | ✅ да    | бесплатно
+| Mimic 1            | ?        | ✅ BSD-like  | ✅ да    | ✅ бесплатно
+| Mimic 2            | ?        | ✅ Apache v2 | ✅ да    | ✅ бесплатно
+| MaryTTS            | нет?     | ✅ LGPL v3   | ✅ да    | ✅ бесплатно
+| FA TTS             | ?        | ✅ LGPL v3   | ✅ да    | ✅ бесплатно
+| eSpeak             | 💔 плохо | ✅ GPL v3    | ✅ да    | ✅ бесплатно
+| eSpeak NG          | ?        | ✅ GPL v3    | ✅ да    | ✅ бесплатно
 | Amazon Polly       | ✅ да    | 💔           | ☁️ нет   | 💰 [платно](https://aws.amazon.com/polly/pricing/?nc=sn&loc=4): 0,4-1,6 ¢ (0,29—1,15 ₽) за 1000 символов
-| Google TTS         | ✅ да    | 💔           | ☁️ нет   | бесплатно
+| Google TTS         | ✅ да    | 💔           | ☁️ нет   | ✅ бесплатно
 | IBM Watson         | ❌ нет   | 💔           | ☁️ нет   | 💰 [платно](https://cloud.ibm.com/catalog/services/text-to-speech): 2,14 ¢ (1,53 ₽) за 1000 символов
 | Microsoft Azure    | ?        | 💔           | ☁️ нет   | ?
 | Microsoft Bing     | ?        | 💔           | ☁️ нет   | ?
-| Mozilla TTS        | ?        | ✅ MPL v2    | ✅ да    | бесплатно
-| Coqui TTS          | ?        | ✅ MPL v2    | ✅ да    | бесплатно
+| Mozilla TTS        | ?        | ✅ MPL v2    | ✅ да    | ✅ бесплатно
+| Coqui TTS          | ?        | ✅ MPL v2    | ✅ да    | ✅ бесплатно
 | Responsive Voice   | ✅ да    | 💔           | ☁️ нет   | ?
-| SpdSay             | ✅ да    | ✅ GPL v2    | ✅ да    | бесплатно
+| SpdSay             | ✅ да    | ✅ GPL v2    | ✅ да    | ✅ бесплатно
 | Yandex Cloud       | ✅ да    | 💔           | ☁️ нет   | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов
 | VK Cloud           | ✅ да    | 💔           | ☁️ нет   | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов
-| SOVA               | ✅ да    | ✅ Apache v2 | ✅ да    | бесплатно
-| RHVoice            | ✅ да    | ✅ LGPL v2.1 | ✅ да    | бесплатно
+| Silero             | ✅ да    | ✅ AGPL v3   | ✅ да    | ✅ бесплатно
+| SOVA               | ✅ да    | ✅ Apache v2 | ✅ да    | ✅ бесплатно
+| RHVoice            | ✅ да    | ✅ LGPL v2.1 | ✅ да    | ✅ бесплатно
 
 ## Что выбрать?
 - Самая быстрая настройка: Google TTS, голос Гугл-переводчика.
