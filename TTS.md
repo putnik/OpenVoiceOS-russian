@@ -87,12 +87,11 @@ sudo apt-get install speech-dispatcher
 ```json
 {
   "lang": "ru-ru",
-  "stt": {
+  "tts": {
     "module": "vk",
-    "vk": {
-      "credential": {
-        "service_token": "YOUR_SERVICE_TOKEN"
-      }
+    "yandex": {
+      "service_token": "YOUR_SERVICE_TOKEN",
+      "tempo": 1.1
     }
   }
 }
