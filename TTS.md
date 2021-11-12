@@ -104,13 +104,13 @@ sudo apt-get install speech-dispatcher
 Первый месяц бесплатно, после этого требует оплаты.
 
 Есть премиальные и обычные голоса. Премиальные намного качественнее, но и дороже примерно в 10 раз. Их два:
-- Филипп (`filipp`) — мужской голос
-- Алёна (`alena`) — женский голос
+- Филипп (`filipp`) — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-yandex-speechkit))
+- Алёна (`alena`) — женский голос ([пример](https://soundcloud.com/sergey-leschina/yandex-alena))
 
 Обычных голосов больше, но многие из них звучат не очень приятно. Субъективно лучшие варианты:
-- Ермил (`ermil`) — мужской голос
-- Элис (`alyss`) — женский голос
-- Оксана (`oksana`) — женский голос
+- Ермил (`ermil`) — мужской голос ([пример](https://soundcloud.com/sergey-leschina/yandex-ermil))
+- Элис (`alyss`) — женский голос ([пример](https://soundcloud.com/sergey-leschina/yandex-alyss))
+- Оксана (`oksana`) — женский голос ([пример](https://soundcloud.com/sergey-leschina/yandex-oksana))
 
 Ссылки:
 - [Создание и настройка облака Яндекса](https://cloud.yandex.ru/services/speechkit)
