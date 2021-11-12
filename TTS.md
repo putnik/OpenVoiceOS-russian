@@ -29,8 +29,8 @@
 | Microsoft Azure                   | ?        | ?
 | Microsoft Bing                    | ?        | ?
 | Responsive Voice                  | ✅ да    | ?
-| [VK Cloud](#vk-cloud)             | ✅ да    | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов
-| [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-yandex-speechkit)
+| [VK Cloud](#vk-cloud)             | ✅ да    | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-vk-cloud)
+| [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов    | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-yandex-speechkit)
 
 ## Что выбрать?
 - Самая быстрая настройка: Google TTS, голос Гугл-переводчика.
@@ -74,7 +74,7 @@ sudo apt-get install speech-dispatcher
 При регистрации даётся 100 рублей (можно получить до 3000 на два месяца для тестирования), дальше требует оплаты.
 
 Плюсы:
-- Можно задать скорость речи (0,75-1,75), рекомендую указывать что-то в диапазоне 1-1,2
+- Можно задать скорость речи (0,75-1,75), рекомендую указывать что-то в диапазоне 1-1,2 ([пример для 1.15](https://soundcloud.com/sergey-leschina/mycroft-tts-vk-cloud-tempo-115))
 
 Проблемы:
 - Только один голос (вроде бы тот же, что у Маруси)
