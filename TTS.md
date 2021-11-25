@@ -2,7 +2,7 @@
 
 Конфиг прописывается после запуска команды `mycroft-config edit user`.
 
-Подробные инструкции по настройке и ссылки на сайты можно найти в [документации Mycroft по STT](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/stt-engine).
+Подробные инструкции по настройке и ссылки на сайты можно найти в [документации Mycroft по TTS](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/tts-engine).
 
 ## Сравнение локальных движков
 | Название           | Русский  | Лицензия     | Пример
