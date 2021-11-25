@@ -5,20 +5,20 @@
 Подробные инструкции по настройке и ссылки на сайты можно найти в [документации Mycroft по STT](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/stt-engine).
 
 ## Сравнение локальных движков
-| Название           | Русский  | Лицензия    
-| ------------------ | -------- | ------------
-| [eSpeak](#espeak)  | 💔 плохо | ✅ GPL v3
-| eSpeak NG          | ?        | ✅ GPL v3
-| Coqui TTS          | ?        | ✅ MPL v2
-| FA TTS             | ?        | ✅ LGPL v3
-| MaryTTS            | нет?     | ✅ LGPL v3
-| Mimic 1            | ?        | ✅ BSD-like
-| Mimic 2            | ?        | ✅ Apache v2
-| Mozilla TTS        | ?        | ✅ MPL v2
-| RHVoice            | ✅ да    | ✅ LGPL v2.1
-| Silero             | ✅ да    | ✅ AGPL v3
-| SOVA               | ✅ да    | ✅ Apache v2
-| [SpdSay](#spdsay)  | ✅ да    | ✅ GPL v2
+| Название           | Русский  | Лицензия     | Пример
+| ------------------ | -------- | ------------ | ------ 
+| [eSpeak](#espeak)  | 💔 плохо | ✅ GPL v3    | 
+| eSpeak NG          | ?        | ✅ GPL v3    | 
+| Coqui TTS          | ?        | ✅ MPL v2    | 
+| FA TTS             | ?        | ✅ LGPL v3   | 
+| MaryTTS            | нет?     | ✅ LGPL v3   | 
+| Mimic 1            | ?        | ✅ BSD-like  | 
+| Mimic 2            | ?        | ✅ Apache v2 | 
+| Mozilla TTS        | ?        | ✅ MPL v2    | 
+| RHVoice            | ✅ да    | ✅ LGPL v2.1 | 
+| [Silero](#silero)  | ✅ да    | ✅ AGPL v3   | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2)
+| SOVA               | ✅ да    | ✅ Apache v2 | 
+| [SpdSay](#spdsay)  | ✅ да    | ✅ GPL v2    | 
 
 ## Сравнение облачных сервисов
 | Название                          | Русский  | Стоимость | Пример
@@ -40,6 +40,43 @@
 ## eSpeak
 Поддержка русского формально заявлена, но на практике очень сложно понимать речь.
 Даже замена файла словаря (`ru_dict`) на улучшенную версию практически не улучгает ситуацию.
+
+## Silero
+Модели на Pytorch для генерации голоса.
+
+Проблемы:
+- Нужен Pytorch 1.9+, его сложно собрать под многие платформы (для RPi 4 есть [инструкция](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html)).
+- Долгая генерация, на RPi 4 выходит 10-15 секунд для одной фразы.
+- Не умеет читать знак минуса `-` и числа, нужна дополнительная конвертация в текст ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2-missing-numbers)).
+
+Установка:
+- идёт работа над плагином
+
+Конфиг будет выглядеть примерно вот так:
+```json
+{
+  "lang": "ru-ru",
+  "tts": {
+    "module": "silero",
+    "silero": {
+      "lang": "ru",
+      "model": "ruslan_v2",
+      "rate": 8000
+    }
+  }
+}
+```
+
+Модели для русского языка:
+- `aidar_v2` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-aidar-v2))
+- `baya_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-baya-v2))
+- `irina_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-irina-v2))
+- `kseniya_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-kseniya-v2))
+- `natasha_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-natasha-v2))
+- `ruslan_v2` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2))
+
+Актуальный список см. в [репозитории Silero](https://github.com/snakers4/silero-models#models-and-speakers).
+
 
 ## SpdSay
 Высокоуровневая обёртка для генерации голоса. Для линукса использует eSpeak NG.
