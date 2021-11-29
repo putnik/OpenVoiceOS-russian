@@ -5,20 +5,20 @@
 Подробные инструкции по настройке и ссылки на сайты можно найти в [документации Mycroft по TTS](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/customizations/tts-engine).
 
 ## Сравнение локальных движков
-| Название           | Русский  | Лицензия     | Пример
-| ------------------ | -------- | ------------ | ------ 
-| [eSpeak](#espeak)  | 💔 плохо | ✅ GPL v3    | 
-| eSpeak NG          | ?        | ✅ GPL v3    | 
-| Coqui TTS          | ?        | ✅ MPL v2    | 
-| FA TTS             | ?        | ✅ LGPL v3   | 
-| MaryTTS            | нет?     | ✅ LGPL v3   | 
-| Mimic 1            | ?        | ✅ BSD-like  | 
-| Mimic 2            | ?        | ✅ Apache v2 | 
-| Mozilla TTS        | ?        | ✅ MPL v2    | 
-| RHVoice            | ✅ да    | ✅ LGPL v2.1 | 
-| [Silero](#silero)  | ✅ да    | ✅ AGPL v3   | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2)
-| SOVA               | ✅ да    | ✅ Apache v2 | 
-| [SpdSay](#spdsay)  | ✅ да    | ✅ GPL v2    | 
+| Название            | Русский  | Лицензия     | Пример
+| ------------------- | -------- | ------------ | ------ 
+| [eSpeak](#espeak)   | 💔 плохо | ✅ GPL v3    | 
+| eSpeak NG           | ?        | ✅ GPL v3    | 
+| Coqui TTS           | ?        | ✅ MPL v2    | 
+| FA TTS              | ?        | ✅ LGPL v3   | 
+| MaryTTS             | нет?     | ✅ LGPL v3   | 
+| Mimic 1             | ?        | ✅ BSD-like  | 
+| Mimic 2             | ?        | ✅ Apache v2 | 
+| Mozilla TTS         | ?        | ✅ MPL v2    | 
+| [RHVoice](#rhvoice) | ✅ да    | ✅ LGPL v2.1 | [SoundCloud](https://soundcloud.com/sergey-leschina/sets/mycroft-tts-rhvoice)
+| [Silero](#silero)   | ✅ да    | ✅ AGPL v3   | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2)
+| SOVA                | ✅ да    | ✅ Apache v2 | 
+| [SpdSay](#spdsay)   | ✅ да    | ✅ GPL v2    | 
 
 ## Сравнение облачных сервисов
 | Название                          | Русский  | Стоимость | Пример
@@ -29,17 +29,55 @@
 | Microsoft Azure                   | ?        | ?
 | Microsoft Bing                    | ?        | ?
 | Responsive Voice                  | ✅ да    | ?
-| [VK Cloud](#vk-cloud)             | ✅ да    | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-vk-cloud)
-| [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов    | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-yandex-speechkit)
+| [VK Cloud](#vk-cloud)             | ✅ да    | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов | [SoundCloud](https://soundcloud.com/sergey-leschina/sets/mycroft-tts-silero)
+| [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов    | [SoundCloud](https://soundcloud.com/sergey-leschina/sets/mycroft-tts-yandex-speechkit)
 
 ## Что выбрать?
 - Самая быстрая настройка: Google TTS, голос Гугл-переводчика.
 - Самый качественный голос в облаке: [Yandex Cloud](#yandex-speechkit) с голосами Филипп (`filipp`) или Алёна (`alena`).
-- Самая лучшая локальная генерация: [SpdSay](#spdsay) (из проверенных)
+- Самая лучшая локальная генерация: [RHVoice](#rhvoice)
 
 ## eSpeak
 Поддержка русского формально заявлена, но на практике очень сложно понимать речь.
 Даже замена файла словаря (`ru_dict`) на улучшенную версию практически не улучгает ситуацию.
+
+## RHVoice
+
+Минусы:
+- Для установки нужно скачать репозиторий с
+
+Установка:
+- см. также [инструкцию в репозитории RHVoice](https://github.com/RHVoice/RHVoice/blob/master/doc/ru/Compiling-on-Linux.md)
+
+```bash
+sudo apt-get install scons libspeechd-dev
+git clone --recurse-submodules https://github.com/RHVoice/RHVoice.git ~/RHVoice
+cd ~/RHVoice
+scons
+sudo scons install
+sudo ldconfig
+mycroft-pip install mycroft-plugin-rhvoice # идёт работа над плагином
+```
+
+Базовый конфиг будет выглядеть так, подробный см. в [репозитории плагина](https://github.com/putnik/mycroft-plugin-rhvoice):
+```json
+{
+  "lang": "ru-ru",
+  "tts": {
+    "module": "rhvoice"
+  }
+}
+```
+
+Модели для русского языка:
+- `aleksandr` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-aleksandr))
+- `aleksandr-hq` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-aleksandr-hq))
+- `anna` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-anna))
+- `elena` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-elena))
+- `irina` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-irina))
+
+Актуальный список см. на [сайте RHVoice](https://rhvoice.org/ru-voices/).
+
 
 ## Silero
 Модели на Pytorch для генерации голоса.
