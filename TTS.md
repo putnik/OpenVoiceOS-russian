@@ -42,9 +42,15 @@
 Даже замена файла словаря (`ru_dict`) на улучшенную версию практически не улучгает ситуацию.
 
 ## RHVoice
+Плюсы:
+- Локальная работа
+- Быстрый ответ
+- Нет проблем с установкой, независимо от платформы
+- Неплохое качество голосов
 
 Минусы:
-- Для установки нужно скачать репозиторий с
+- Большой репозиторий с кодом и долгая установка из исходников
+- Озвучка числительных только как количественных, но не как порядковых
 
 Установка:
 - см. также [инструкцию в репозитории RHVoice](https://github.com/RHVoice/RHVoice/blob/master/doc/ru/Compiling-on-Linux.md)
@@ -56,7 +62,7 @@ cd ~/RHVoice
 scons
 sudo scons install
 sudo ldconfig
-mycroft-pip install mycroft-plugin-rhvoice # идёт работа над плагином
+mycroft-pip install mycroft-plugin-rhvoice
 ```
 
 Базовый конфиг будет выглядеть так, подробный см. в [репозитории плагина](https://github.com/putnik/mycroft-plugin-rhvoice):
