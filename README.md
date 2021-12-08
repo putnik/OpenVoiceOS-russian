@@ -3,7 +3,7 @@
 - работа оффлайн без необходимости распознавать или генерировать текст в облаке
 - информация о погоде
 - прослушивание музыки через Spotify
-- ответы на базовые вопросы (Википедия, Гугл, WolframAlpha и т. п.)
+- ответы на базовые вопросы (Википедия, DuckDuckGo, WolframAlpha или что-нибудь ещё)
 - управление умным домом через Home Assistant
 
 План работ:
@@ -13,7 +13,6 @@
 * Перевод ядра:
   * [x] Добавить поддержку русского языка в [lingua-franca](https://github.com/MycroftAI/lingua-franca) — [issue](https://github.com/MycroftAI/lingua-franca/issues/213), [PR](https://github.com/MycroftAI/lingua-franca/pull/214)
   * [ ] Перевести [mycroft-core](https://github.com/MycroftAI/mycroft-core) — [PR](https://github.com/MycroftAI/mycroft-core/pull/3014)
-  * [ ] Перевести [mycroft-skills](https://github.com/MycroftAI/mycroft-skills)
 * Навыки:
   * [x] Перевести основные навыки на [translate.mycroft.ai](https://translate.mycroft.ai/ru/)
   * [x] Перевести [погодный навык](https://github.com/MycroftAI/skill-weather) (translate.mycroft.ai устарел) — [PR](https://github.com/MycroftAI/skill-weather/pull/188)
