@@ -10,9 +10,9 @@
 * [x] TTS/STT:
   * [x] Выбрать оффлайновый движок [Text-to-Speech (TTS)](/TTS) — [RHVoice](/TTS#rhvoice)
   * [x] Выбрать оффлайновый движок [Speech-To-Text (STT)](/STT) — [Vosk](/STT#vosk)
-* [ ] Перевод ядра:
+* [x] Перевод ядра:
   * [x] Добавить поддержку русского языка в [lingua-franca](https://github.com/MycroftAI/lingua-franca) — [issue](https://github.com/MycroftAI/lingua-franca/issues/213), [PR](https://github.com/MycroftAI/lingua-franca/pull/214)
-  * [ ] Перевести [mycroft-core](https://github.com/MycroftAI/mycroft-core) — [PR](https://github.com/MycroftAI/mycroft-core/pull/3014)
+  * [x] Перевести [mycroft-core](https://github.com/MycroftAI/mycroft-core) — [PR](https://github.com/MycroftAI/mycroft-core/pull/3014)
 * [ ] Навыки:
   * [x] Перевести основные навыки на [translate.mycroft.ai](https://translate.mycroft.ai/ru/)
   * [x] Перевести [погодный навык](https://github.com/MycroftAI/skill-weather) (translate.mycroft.ai устарел) — [PR](https://github.com/MycroftAI/skill-weather/pull/188)
