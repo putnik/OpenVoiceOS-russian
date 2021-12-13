@@ -6,6 +6,10 @@
 - ответы на базовые вопросы (Википедия, DuckDuckGo, WolframAlpha или что-нибудь ещё)
 - управление умным домом через Home Assistant
 
+Как начать:
+- смотрите [руководство](/QUICK-START.md)
+- приходите в [чат](https://chat.mycroft.ai/community/channels/pycroft)
+
 План работ:
 * [x] TTS/STT:
   * [x] Выбрать оффлайновый движок [Text-to-Speech (TTS)](/TTS) — [RHVoice](/TTS#rhvoice)
@@ -16,6 +20,7 @@
 * [ ] Навыки:
   * [x] Перевести основные навыки на [translate.mycroft.ai](https://translate.mycroft.ai/ru/)
   * [x] Перевести [погодный навык](https://github.com/MycroftAI/skill-weather) (translate.mycroft.ai устарел) — [PR](https://github.com/MycroftAI/skill-weather/pull/188)
+    * [ ] Поправить [баг с celsius](https://github.com/MycroftAI/skill-weather/issues/189)
   * [ ] Перевести [навык Spotify](https://github.com/forslund/spotify-skill) (translate.mycroft.ai устарел) — [ветка с переводом](https://github.com/putnik/spotify-skill/tree/21.01-russian)
   * [ ] Перевести [навык Playback Control](https://github.com/MycroftAI/skill-playback-control) (нужен для Spotify)
   * [ ] Перевести [навык Home Assistant](https://github.com/MycroftAI/skill-homeassistantr)
