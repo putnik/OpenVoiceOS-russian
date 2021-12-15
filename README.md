@@ -23,7 +23,7 @@
     * [ ] Поправить [баг с celsius](https://github.com/MycroftAI/skill-weather/issues/189)
   * [ ] Перевести [навык Spotify](https://github.com/forslund/spotify-skill) (translate.mycroft.ai устарел) — [ветка с переводом](https://github.com/putnik/spotify-skill/tree/21.01-russian)
   * [ ] Перевести [навык Playback Control](https://github.com/MycroftAI/skill-playback-control) (нужен для Spotify) — [ветка с переводом](https://github.com/putnik/skill-playback-control/tree/21.02-russian)
-  * [ ] Перевести [навык Home Assistant](https://github.com/MycroftAI/skill-homeassistantr)
+  * [ ] Перевести [навык Home Assistant](https://github.com/MycroftAI/skill-homeassistant)
   * [ ] …
 * [ ] Сборка образа с поддержкой русского языка:
   * [ ] Сделать инструкцию по настройке — [черновик](/QUICK-START.md)
