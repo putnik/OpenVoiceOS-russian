@@ -25,9 +25,10 @@
   * [ ] Перевести [навык Playback Control](https://github.com/MycroftAI/skill-playback-control) (нужен для Spotify) — [ветка с переводом](https://github.com/putnik/skill-playback-control/tree/21.02-russian)
   * [ ] Перевести [навык Home Assistant](https://github.com/MycroftAI/skill-homeassistantr)
   * [ ] …
-* [ ] Сборка:
+* [ ] Сборка образа с поддержкой русского языка:
   * [ ] Сделать инструкцию по настройке — [черновик](/QUICK-START.md)
-  * [ ] Настроить автоматическую сборку образа с поддержкой русского языка (например, на основе [kleo/picroft](https://github.com/kleo/picroft))
+  * [ ] Сделать [плейбук для ansible](https://opensource.com/article/21/12/mycroft-raspberry-pi-ansible)
+  * [ ] Настроить автоматическую сборку образа (см. [kleo/picroft](https://github.com/kleo/picroft))
 
 ## Настройка языка
 Нужно установить язык по умолчанию, а также настроить, какой движок будет использоваться для [Text-to-Speech (TTS)](/TTS) и [Speech-To-Text (STT)](/STT).
