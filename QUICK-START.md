@@ -30,10 +30,10 @@ network={
 sudo dpkg-reconfigure locales # везде выбрать ru_RU.UTF-8
 echo ': "${LC_ALL:=ru_RU.UTF-8}"; export LC_ALL' | sudo tee -a /etc/profile
 ```
-2. Установите кастомную версию lingua-franca с поддержкой русского языка _(они уже вмержены в основную ветку, после следующего релиза можно будет убрать этот пункт)_
+2. Установите dev-версию lingua-franca с поддержкой русского языка _(после следующего релиза можно будет убрать этот пункт)_
 ```bash
 mycroft-pip uninstall lingua-franca -y
-mycroft-pip install git+https://github.com/putnik/lingua-franca.git@issue-213
+mycroft-pip install git+https://github.com/MycroftAI/lingua-franca.git
 ```
 3. Установите русский язык и STT/TTS с его поддержкой в настройках Mycroft. Выберите более подходящие вам варианты на страницах настройки [STT](/STT.md) и [TTS](/TTS.md). Если не знаете, что выбрать, то выбирайте [Vosk](./STT.md#vosk) для STT и [RHVoice](./TTS.md#rhvoice) для TTS. Их нужно будет установить. Редактируем конфиг (`mycroft-config edit user`) и прописываем то, что выбрали. Будет примерно так:
 ```json
