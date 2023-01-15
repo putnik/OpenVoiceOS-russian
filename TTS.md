@@ -15,8 +15,8 @@
 | Mimic 1             | ?        | ✅ BSD-like  | 
 | Mimic 2             | ?        | ✅ Apache v2 | 
 | Mozilla TTS         | ?        | ✅ MPL v2    | 
-| [RHVoice](#rhvoice) | ✅ да    | ✅ LGPL v2.1 | [SoundCloud](https://soundcloud.com/sergey-leschina/sets/mycroft-tts-rhvoice)
-| [Silero](#silero)   | ✅ да    | ✅ AGPL v3   | [SoundCloud](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2)
+| [RHVoice](#rhvoice) | ✅ да    | ✅ LGPL v2.1 | [SoundCloud](https://soundcloud.com/putnik-tech/sets/mycroft-tts-rhvoice)
+| [Silero](#silero)   | ✅ да    | ✅ AGPL v3   | [SoundCloud](https://soundcloud.com/putnik-tech/mycroft-tts-silero-ruslan-v2)
 | SOVA                | ✅ да    | ✅ Apache v2 | 
 | [SpdSay](#spdsay)   | ✅ да    | ✅ GPL v2    | 
 
@@ -29,8 +29,8 @@
 | Microsoft Azure                   | ?        | ?
 | Microsoft Bing                    | ?        | ?
 | Responsive Voice                  | ✅ да    | ?
-| [VK Cloud](#vk-cloud)             | ✅ да    | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов | [SoundCloud](https://soundcloud.com/sergey-leschina/sets/mycroft-tts-silero)
-| [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов    | [SoundCloud](https://soundcloud.com/sergey-leschina/sets/mycroft-tts-yandex-speechkit)
+| [VK Cloud](#vk-cloud)             | ✅ да    | 💰 [платно](https://mcs.mail.ru/cloud-voice/#pricing): 1 ₽ за 1000 символов | [SoundCloud](https://soundcloud.com/putnik-tech/sets/mycroft-tts-silero)
+| [Yandex Cloud](#yandex-speechkit) | ✅ да    | 💰 [платно](https://cloud.yandex.ru/prices): 0,18—1,2 ₽ за 1000 символов    | [SoundCloud](https://soundcloud.com/putnik-tech/sets/mycroft-tts-yandex-speechkit)
 
 ## Что выбрать?
 - Самая быстрая настройка: Google TTS, голос Гугл-переводчика.
@@ -76,11 +76,11 @@ mycroft-pip install mycroft-plugin-rhvoice
 ```
 
 Модели для русского языка:
-- `aleksandr` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-aleksandr))
-- `aleksandr-hq` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-aleksandr-hq))
-- `anna` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-anna))
-- `elena` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-elena))
-- `irina` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-rhvoice-irina))
+- `aleksandr` — мужской голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-rhvoice-aleksandr))
+- `aleksandr-hq` — мужской голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-rhvoice-aleksandr-hq))
+- `anna` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-rhvoice-anna))
+- `elena` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-rhvoice-elena))
+- `irina` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-rhvoice-irina))
 
 Актуальный список см. на [сайте RHVoice](https://rhvoice.org/ru-voices/).
 
@@ -89,9 +89,9 @@ mycroft-pip install mycroft-plugin-rhvoice
 Модели на Pytorch для генерации голоса.
 
 Проблемы:
-- Нужен Pytorch 1.9+, его сложно собрать под многие платформы (для RPi 4 есть [инструкция](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html)).
-- Долгая генерация, на RPi 4 выходит 10-15 секунд для одной фразы.
-- Не умеет читать знак минуса `-` и числа, нужна дополнительная конвертация в текст ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2-missing-numbers)).
+- Нужен Pytorch 1.10+, его сложно собрать под многие платформы (для RPi 4 есть [инструкция](https://qengineering.eu/install-pytorch-on-raspberry-pi-4.html)).
+- Долгая генерация, на RPi 4 выходит 10-15 секунд для одной фразы для v2, возможно в v3 всё значительно лучше.
+- Не умеет читать знак минуса `-` и числа, нужна дополнительная конвертация в текст ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-ruslan-v2-missing-numbers)).
 
 Установка:
 - идёт работа над плагином
@@ -104,20 +104,19 @@ mycroft-pip install mycroft-plugin-rhvoice
     "module": "silero",
     "silero": {
       "lang": "ru",
-      "model": "ruslan_v2",
+      "model": "v3_1_ru",
       "rate": 8000
     }
   }
 }
 ```
 
-Модели для русского языка:
-- `aidar_v2` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-aidar-v2))
-- `baya_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-baya-v2))
-- `irina_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-irina-v2))
-- `kseniya_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-kseniya-v2))
-- `natasha_v2` — женский голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-natasha-v2))
-- `ruslan_v2` — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-silero-ruslan-v2))
+Голоса для русского языка (примеры для устаревшей версии v2):
+- `aidar` — мужской голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-aidar-v2))
+- `baya` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-baya-v2))
+- `kseniya` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-kseniya-v2))
+- `xenia` — женский голос
+- `eugene` — мужской (?) голос
 
 Актуальный список см. в [репозитории Silero](https://github.com/snakers4/silero-models#models-and-speakers).
 
@@ -155,7 +154,7 @@ sudo apt-get install speech-dispatcher
 При регистрации даётся 100 рублей (можно получить до 3000 на два месяца для тестирования), дальше требует оплаты.
 
 Плюсы:
-- Можно задать скорость речи (0,75-1,75), рекомендую указывать что-то в диапазоне 1-1,2 ([пример для 1.15](https://soundcloud.com/sergey-leschina/mycroft-tts-vk-cloud-tempo-115))
+- Можно задать скорость речи (0,75-1,75), рекомендую указывать что-то в диапазоне 1-1,2 ([пример для 1.15](https://soundcloud.com/putnik-tech/mycroft-tts-vk-cloud-tempo-115))
 
 Проблемы:
 - Только один голос (вроде бы тот же, что у Маруси)
@@ -185,13 +184,13 @@ sudo apt-get install speech-dispatcher
 Первый месяц бесплатно, после этого требует оплаты.
 
 Есть премиальные и обычные голоса. Премиальные намного качественнее, но и дороже примерно в 10 раз. Их два:
-- Филипп (`filipp`) — мужской голос ([пример](https://soundcloud.com/sergey-leschina/mycroft-tts-yandex-speechkit))
-- Алёна (`alena`) — женский голос ([пример](https://soundcloud.com/sergey-leschina/yandex-alena))
+- Филипп (`filipp`) — мужской голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-yandex-speechkit))
+- Алёна (`alena`) — женский голос ([пример](https://soundcloud.com/putnik-tech/yandex-alena))
 
 Обычных голосов больше, но многие из них звучат не очень приятно. Субъективно лучшие варианты:
-- Ермил (`ermil`) — мужской голос ([пример](https://soundcloud.com/sergey-leschina/yandex-ermil))
-- Элис (`alyss`) — женский голос ([пример](https://soundcloud.com/sergey-leschina/yandex-alyss))
-- Оксана (`oksana`) — женский голос ([пример](https://soundcloud.com/sergey-leschina/yandex-oksana))
+- Ермил (`ermil`) — мужской голос ([пример](https://soundcloud.com/putnik-tech/yandex-ermil))
+- Элис (`alyss`) — женский голос ([пример](https://soundcloud.com/putnik-tech/yandex-alyss))
+- Оксана (`oksana`) — женский голос ([пример](https://soundcloud.com/putnik-tech/yandex-oksana))
 
 Ссылки:
 - [Создание и настройка облака Яндекса](https://cloud.yandex.ru/services/speechkit)
