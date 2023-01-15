@@ -105,18 +105,19 @@ mycroft-pip install mycroft-plugin-rhvoice
     "silero": {
       "lang": "ru",
       "model": "v3_1_ru",
+      "voice": "eugene",
       "rate": 8000
     }
   }
 }
 ```
 
-Голоса для русского языка (примеры для устаревшей версии v2):
-- `aidar` — мужской голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-aidar-v2))
-- `baya` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-baya-v2))
-- `kseniya` — женский голос ([пример](https://soundcloud.com/putnik-tech/mycroft-tts-silero-kseniya-v2))
-- `xenia` — женский голос
-- `eugene` — мужской (?) голос
+Голоса для русского языка:
+- `aidar` — мужской голос ([пример](https://soundcloud.com/alexander-veysov/aidar))
+- `baya` — женский голос ([пример](https://soundcloud.com/alexander-veysov/baya))
+- `kseniya` — женский голос ([пример](https://soundcloud.com/alexander-veysov/kseniya))
+- `xenia` — женский голос ([пример](https://soundcloud.com/alexander-veysov/xenia))
+- `eugene` — мужской голос ([пример](https://soundcloud.com/alexander-veysov/eugene))
 
 Актуальный список см. в [репозитории Silero](https://github.com/snakers4/silero-models#models-and-speakers).
 
