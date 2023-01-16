@@ -3,7 +3,7 @@
 Есть неплохая [официальная инструкция](https://mycroft-ai.gitbook.io/docs/using-mycroft-ai/get-mycroft/picroft#getting-started-with-picroft) для Picroft, к которой можно обратиться при возникновении проблем.
 
 ## Подготовка к запуску
-1. Загрузите самую [свежий weekly-образ](https://sourceforge.net/projects/picroft/files/weekly/) Picroft из [kleo/picroft](https://github.com/kleo/picroft). Это Debian с предустановленным Майкрофтом. Если у вас Raspberry Pi 4, то можно взять arm64-версию. Так как это SourceForge, то скачиваться будет долго, лучше сделайте это заранее.
+1. Загрузите самую [свежий weekly-образ](https://sourceforge.net/projects/picroft/files/weekly/) Picroft из [kleo/picroft](https://github.com/kleo/picroft). Это Debian с предустановленным Майкрофтом. Не берите arm64-версию, если не знаете, зачем она вам. Так как это SourceForge, то скачиваться будет долго, лучше сделайте это заранее.
 2. Запишите образ на MicroSD через [Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 3. Создайте в корне MicroSD пустой файл `ssh.txt` для включения доступа по SSH.
 4. Создайте в корне MicroSD файл `wpa_supplicant.conf` с таким содержимым для подключения к Wi-Fi (замените имя сети и пароль на свои):
