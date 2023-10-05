@@ -6,10 +6,10 @@
 - ответы на базовые вопросы (Википедия, DuckDuckGo, WolframAlpha или что-нибудь ещё)
 - управление умным домом через Home Assistant
 
-Установка на Raspberry Pi:
-- Запишите на microSD-карту образ [Raspberry Pi OS](https://www.raspberrypi.com/software/).
+Установка на Raspberry Pi 4B:
+- Запишите на microSD-карту образ [Raspberry Pi OS Lite 64-bit](https://www.raspberrypi.com/software/).
   - В дополнительных настройках включите SSH и настройте Wi-Fi.
-- Зайдите по SSH на Raspberry Pi и запустите скрипт: `https://gist.githubusercontent.com/putnik/26d8a8ad70cd428bb79bbe0c25811bfe/raw/install.sh | sudo sh`
+- Зайдите по SSH на Raspberry Pi и запустите скрипт: `curl https://gist.githubusercontent.com/putnik/26d8a8ad70cd428bb79bbe0c25811bfe/raw/install.sh | sudo sh`
 - После заверешения перезагрузите устройство и немного подождите. Голосовой помощник готов* к работе.
 
 _&ast; По крайней мере, в теории. Скрипт всё ещё дорабатывается._
